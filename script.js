@@ -1,210 +1,244 @@
-// function timeTask (input) {
-    // let firstTime = Number(input[0]);
-    // let secondTime = Number(input[1]);
-    // let thirdTime = Number(input[2]);
-// 
-    // let totalTime = firstTime + secondTime + thirdTime;
-    // let minutes = Math.floor(totalTime / 60);
-    // let seconds = totalTime % 60;
-// 
-    // if (seconds < 10) {
-        // console.log(`${minutes}:0${seconds}`)
-    // }
-    // else {
-        // console.log(`${minutes}:${seconds}`)
+// function dayOfTheWeek(input) {
+    // let day = Number(input[0]);
+    // switch(day) {
+        // case 1: console.log("Monday"); break;
+        // case 2: console.log("Tuesday"); break;
+        // case 3: console.log("Wednesday"); break;
+        // case 4: console.log("Thursday"); break;
+        // case 5: console.log("Friday"); break;
+        // case 6: console.log("Saturday"); break;
+        // case 7: console.log("Sunday"); break;
+        // default: console.log("Error"); break;
     // }
 // }
 // 
-// timeTask(["35","45","44"])
-
-
-// function bonusTask(input) {
-    // let points = Number(input[0]);
-    // let bonus = 0
-    // if(points <= 100) {
-        // bonus = 5
-    // }
-    // else if(points <= 1000) {
-        // bonus = points * 0.2;
-    // }
-    // else {
-        // bonus = points * 0.1;
-    // }
+// dayOfTheWeek([1])
 // 
-    // if (points % 2 === 0) {
-        // bonus = bonus + 1;
-    // }
-    // else if(points % 10 === 5) {
-        // bonus = bonus + 2;
-    // }
-    // let sum = points + bonus
-    // console.log(bonus)
-    // console.log(sum)
-// }
-// 
-// bonusTask(["20"])
+// Вход Изход 
+// (["1"]) Monday 
+// (["2"]) Tuesday 
+// (["3"]) Wednesday 
+// (["4"]) Thursday 
+// (["5"]) Friday 
+// (["6"]) Saturday 
+// (["7"]) Sunday 
+// (["-1"]) Error 
 
 
-// function fifteenMinuteTask(input) {
-    // let hours = Number(input[0]);
-    // let minutes = Number(input[1]);
-    // bonus = 15;
-// 
-    // let totalMins = hours * 60 + minutes + 15;
-    // let minutesLeft = totalMins % 60;
-    // let finalHours = Math.floor(totalMins / 60);
-    // 
-    // if (finalHours === 24) {
-    // finalHours = 0;
-    // }
-    // 
-    // if (minutesLeft < 10) {
-        // console.log(`${finalHours}:0${minutesLeft}`)
-    // }
-    // else {
-        // console.log(`${finalHours}:${minutesLeft}`)
+// function workingWeekendDays(input) {
+    // let day = input[0];
+    // switch(day) {
+        // case "Monday" :
+        // case "Tuesday" :
+        // case "Wednesday" :
+        // case "Thursday" :
+        // case "Friday" : console.log("Working day"); break;
+        // case "Saturday" :
+        // case "Sunday" : console.log("Weekend"); break;
+        // default: console.log("Error"); break;
     // }
 // }
 // 
-// fifteenMinuteTask(["1","66"])
+// workingWeekendDays(["Monday"])\
 
 
-// function toyStore (input) {
-    // let holiday = Number(input[0]);
-    // let puzzleOrder = Number(input[1]);
-    // let dollOrder = Number(input[2]);
-    // let teddyOrder = Number(input[3]);
-    // let minionOrder = Number(input[4]);
-    // let truckOrder = Number(input[5]);
-    // let totalToys = dollOrder + teddyOrder + truckOrder + minionOrder + puzzleOrder;  //if over 50 toys 25% discount
-    // let totalSell = 2.6 * puzzleOrder + 3 * dollOrder + 4.1 * teddyOrder + 8.2 * minionOrder + 2 * truckOrder;
-// 
-    // if (totalToys >= 50) {
-        // totalSell = totalSell * 3/4;
-    // }
-    // let profit = totalSell;
-    // profit = 9/10 * profit;
-    // 
-    // if (profit >= holiday) {
-        // moneyLeft = profit - holiday;
-        // console.log(`Yes! ${moneyLeft.toFixed(2)} lv left.`)
-    // }
-    // else {
-        // let moneyNeeded = holiday - profit;
-        // console.log(`Not enough money! ${moneyNeeded.toFixed(2)} lv needed.`)
+// function fruitVegetable(input) {
+    // let food = input[0];
+    // switch(food) {
+        // case "banana":
+        // case "apple":
+        // case "kiwi":
+        // case "cherry":
+        // case "lemon" :
+        // case "grapes" : console.log("fruit"); break;
+        // case "tomato" :
+        // case "cucumber":
+        // case "pepper" :
+        // case "carrot" : console.log("vegetable"); break;
+        // default: console.log("unknown")
     // }
 // }
 // 
-// toyStore(["40.8","20","25","30","50","10"]) 
+// fruitVegetable(["apple"])
 
 
-// function GodzillaVsKong(input) {
-    // let budget = Number(input[0]);
-    // let stats = Number(input[1]);
-    // let outfit = Number(input[2]);
-    // let decor = 1/10 * budget;
-    // let outfitPrice = outfit * stats;
+// function ageGender(input) {
+    // let age = Number(input[0]);
+    // let gender = input[1];
 // 
-    // if (stats > 150) {
-        // outfitPrice = 9/10 * outfitPrice
-    // }
-    // let discountedOutfits = outfitPrice;
-// 
-    // let sum = discountedOutfits + decor;
-    // let sumLeft = budget - sum;
-    // if (sum <= budget) {
-        // console.log("Action!")
-        // console.log(`Wingard starts filming with ${sumLeft.toFixed(2)} leva left.`)
+    // if(age >= 16) {
+        // if(gender === "f"){
+            // console.log("Ms.")
+        // }
+        // else {
+            // console.log("Mr.")
+        // }
     // }
     // else {
-        // let sumNeeded = sum - budget
-        // console.log("Not enough money!")
-        // console.log(`Wingard needs ${sumNeeded.toFixed(2)} leva more.`)
+        // if(gender === "f") {
+            // console.log("Miss") 
+        // }
+        // else (
+            // console.log("Master")
+        // )
     // }
 // }
 // 
-// GodzillaVsKong(["20000","120","55.5"]) 
+// ageGender(["12", "f"])
 
-// function swimmingRecord(input) {
-    // let recordTime = Number(input[0]);
-    // let distance = Number(input[1]);
-    // let secondsPerMeter = Number(input[2]);
+// function animals(input) {
+    // let animal = input[0];
+    // switch(animal) {
+        // case "dog": console.log("mammal"); break;
+        // case "crocodile":
+        // case "tortoise":
+        // case "snake" : console.log("reptile"); break;
+        // default: console.log("unknown")
+    // }
+// }
+// animals(["crocsdasd"])
+// function shop(input) {
+    // let product = input[0];
+    // let city = input[1];
+    // let amount = Number(input[2]);
 // 
-    // let swimmingTime = distance * secondsPerMeter;
-    // let delayCount = Math.floor(distance / 15);
-    // let delayTime = delayCount * 12.5;
-    // let totalTime = swimmingTime + delayTime;
-// 
-    // if (totalTime < recordTime) {
-        // console.log(`Yes, he succeeded! The new world record is ${totalTime.toFixed(2)} seconds.`)
+    // if(city === "Sofia") {
+        // switch(product){
+            // case "coffee": console.log(0.50 * amount); break;
+            // case "water": console.log(0.80 * amount); break;
+            // case "beer": console.log(1.20 * amount); break;
+            // case "sweets": console.log(1.45 * amount); break;
+            // case "peanuts": console.log(1.60 * amount); break;
+        // }
+    // }
+    // else if(city === "Plovdiv") {
+        // switch(product){
+            // case "coffee": console.log(0.40 * amount); break;
+            // case "water": console.log(0.70 * amount); break;
+            // case "beer": console.log(1.15 * amount); break;
+            // case "sweets": console.log(1.30 * amount); break;
+            // case "peanuts": console.log(1.50 * amount); break;
+        // }
     // }
     // else {
-        // let insufficientSeconds = totalTime - recordTime
-        // console.log(`No, he failed! He was ${insufficientSeconds.toFixed(2)} seconds slower.`)
+        // switch(product){
+            // case "coffee": console.log(0.45 * amount); break;
+            // case "water": console.log(0.70 * amount); break;
+            // case "beer": console.log(1.10 * amount); break;
+            // case "sweets": console.log(1.35 * amount); break;
+            // case "peanuts": console.log(1.55 * amount); break;
+        // }
     // }
 // }
 // 
-// swimmingRecord(["55555.67",
-// 
-// "3017", "20"])
+// shop(["sweets","Sofiq","2.23"])
 
-
-// function shopping (input) {
-    // Видеокарта – 250 лв./бр.
-    // Процесор – 35% от цената на закупените видеокарти/бр.
-    // Рам памет – 10% от цената на закупените видеокарти/бр. 
-    // Ако броя на видеокартите е по-голям от този на процесорите
-    // получава 15% отстъпка от крайната сметка
-    // let budget = Number(input[0]);
-    // let gpuCount = Number(input[1]);
-    // let cpuCount = Number(input[2]);
-    // let ramCount = Number(input[3]);
-// 
-    // let gpuSum = gpuCount * 250;
-    // let cpuSum = (35/100 * gpuSum) * cpuCount;
-    // let ramSum = (1/10 * gpuSum) * ramCount;
-    // let totalSum = cpuSum + gpuSum + ramSum;
-    // if (gpuCount > cpuCount) {
-        // totalSum = totalSum * 85/100
-    // }
-    // let finalPrice = totalSum;
-// 
-    // if (finalPrice <= budget) {
-        // let moneyLeft = budget - finalPrice;
-        // console.log(`You have ${moneyLeft.toFixed(2)} leva left!`)
-    // }
-    // else {
-        // let moneyNeeded = finalPrice - budget;
-        // console.log(`Not enough money! You need ${moneyNeeded.toFixed(2)} leva more!`)
+// function numberInRange(input) {
+    // let number = Number(input[0]);
+    // if(number >= -100 && number <= 100 && number !== 0) {
+    // console.log("Yes")
+    // } else {
+        // console.log("No")
     // }
 // }
 // 
-// shopping(["920.45",
+// numberInRange(["-25"])
+
+// function ticket(input){
+    // let day = input[0];
+    // if(day === "Monday" || day === "Tuesday" || day === "Friday"){
+        // console.log(12)
+    // } else if(day === "Wednesday" || day === "Thursday") {
+        // console.log(14)
+    // } else {
+        // console.log(16)
+    // }
+// }
+// ticket(["Sunday"])
+
+// function workTime(input) {
+    // let hour = Number(input[0]);
+    // let day = input[1];
+    // switch(day){
+        // case "Monday":
+        // case "Tuesday":
+        // case "Wednesday":
+        // case "Thursday":
+        // case "Friday":
+        // case "Saturday": 
+            // if(hour >= 10 && hour <= 18) {
+                // console.log("open")
+            // } else {
+                // console.log("closed")
+            // } break;
+        // default: console.log("closed")
+    // }
+// }
 // 
-// "3",
+// workTime(["19","Monday"])
+
+// function validNumbers(input) {
+    // let num = Number(input[0]);
+    // let isValid = num >= 100 && num <= 200 || num === 0;                         //isValid е променлива която проверява дали числото е валидно
+    // if(isValid === false) {                                                     //следователно ако числото е валидно стойността на boolean-а ще е true
+        // console.log("invalid")                                                 // със if проверяваме ако числото е false, тъй като когато е true конзолата не трябва да отпечатва нищо
+    // } 
+// }
 // 
-// "1",
-// 
-// "1"])  
+// validNumbers(["150"])
 
+function comissionsTask(input) {
+    let city = input[0];
+    let amount = Number(input[1]);
+    let comissions = 0;
+    if(city === "Sofia"){
+            if(amount >= 0 && amount <= 500) {
+                comissions = 5/100 * amount;
+            } else if(amount >= 500 && amount <= 1000) {
+                comissions = 7/100 * amount;
+            } else if(amount >= 1000 && amount <= 10000) {
+                comissions = 8/100 * amount;
+            } else if(amount >= 10000) {
+                comissions = 12/100 * amount;
+            } else if(amount <= 0){
+                console.log("error")
+            } 
+            console.log(comissions.toFixed(2))
+    } else if(city === "Varna") {
+        
+            if(amount >= 0 && amount <= 500) {
+                comissions = 4.5/100 * amount;
+            } else if(amount >= 500 && amount <= 1000) {
+                comissions = 7.5/100 * amount;
+            } else if(amount >= 1000 && amount <= 10000) {
+                comissions = 10/100 * amount;
+            } else if(amount >= 10000) {
+                comissions = 13/100 * amount;
+            } else if(amount <= 0){
+                console.log("error")
+            } 
+            console.log(comissions.toFixed(2))
+    } else if(city === "Plovdiv") {
 
-function lunchBreak(input) {
-    let seriesName = input[0];
-    let episodeLength = Number(input[1]);
-    let breakLength = Number(input[2]);
+            if(amount >= 0 && amount <= 500) {
+                comissions = 5.5/100 * amount;
+            } else if(amount >= 500 && amount <= 1000) {
+                comissions = 8/100 * amount;
+            } else if(amount >= 1000 && amount <= 10000) {
+                comissions = 12/100 * amount;
+            } else if(amount >= 10000) {
+                comissions = 14.5/100 * amount;
+            } else {
+                console.log("error")
+            }
+        } else {
+            console.log("error")
+        } 
+        if(comissions >= 0) {
+            console.log(comissions.toFixed(2))
+        } else {
+            console.log("error")
+        }          
+    } 
 
-    let lunchTime = 1/8 * breakLength;
-    let restTime = 1/4 * breakLength;
-    let breakTimeLeft = breakLength - (lunchTime + restTime)
-
-    if (breakTimeLeft >= episodeLength) {
-        let timeLeft = Math.ceil(breakTimeLeft - episodeLength);
-        console.log(`You have enough time to watch ${seriesName} and left with ${timeLeft} minutes free time.`)
-    }
-    else {
-        timeNeeded = Math.ceil(episodeLength - breakTimeLeft);
-        console.log(`You don't have enough time to watch ${seriesName}, you need ${timeNeeded} more minutes.`)
-    }
-}
-
-lunchBreak(["Teen Wolf","48","60"]) 
+comissionsTask(["Plovdiv","-20"])
