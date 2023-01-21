@@ -36,10 +36,12 @@ function comissionsTask(input) {
                 comissions = 12/100 * amount;
             } else if(amount >= 10000) {
                 comissions = 14.5/100 * amount;
-            } else {
-                console.log("error")
             } 
+              if(comissions <= 0){
+                console.log("error")
+              } else {
                 console.log(comissions.toFixed(2))
+              }
                 break;
             default: console.log("error")
     }  
