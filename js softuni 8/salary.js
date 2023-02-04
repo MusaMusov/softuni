@@ -22,4 +22,4 @@ function salary(input) {
     }
 }
 
-salary(["3", "500", "Github.com", "Stackoverflow.com", "softuni.bg"]) 
+salary(["3", "500", "Github.com", "Stackoverflow.com", "Facebook"]) 

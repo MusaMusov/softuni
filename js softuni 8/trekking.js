@@ -44,7 +44,8 @@ function trekking(input) {
     console.log(`${everestPercent.toFixed(2)}%`);
 }
 
-trekking([
+trekking
+([
     "10",
     "10",
     "5",
@@ -55,7 +56,8 @@ trekking([
     "17", 
     "37", 
     "40", 
-    "78"])
+    "78"
+])
 
     // Първи ред - процентът изкачващи Мусала
 

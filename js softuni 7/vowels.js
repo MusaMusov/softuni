@@ -14,4 +14,4 @@ function vowels(input) {
     } console.log(sum)
 }
 
-vowels(["hello"])
+vowels(["boza"])
