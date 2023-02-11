@@ -4,23 +4,20 @@ function stepsPerDay(input) {
     index++;
     let totalSteps = 0;
     while(steps !== "Going home") {
-        steps = Number(input[index - 1]);
+        steps = Number(index);
         totalSteps += steps;
         if(totalSteps >= 10000) {
             console.log("Goal reached! Good job!");
             console.log(`${totalSteps - 10000} steps over the goal!`);
             return;
         }
-        steps = Number(input[index])
+        steps = input[index]
         index++;
     }
  
-
-
-
     if (steps === "Going home") {
         totalSteps += input[input.length - 1];
-        console.log(`${10000 - totalSteps} more steps to reach goal.`);
+        console.log(`${(10000 - totalSteps) * -1} more steps to reach goal.`);
         return;
     }
 

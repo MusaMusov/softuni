@@ -12,11 +12,12 @@ function cake(input){
     index++;
 
     while(pieces !== "STOP") {
-        pieces = Number(input[pieces]);
+        pieces = Number(pieces);
         size -= pieces;
 
         if(size <= 0) { 
             console.log(`No more cake left! You need ${size * -1} pieces more.`);
+            break;
         }
 
         pieces = input[index];
@@ -32,6 +33,6 @@ cake
 "2",
 "2",
 "4",
-"4",
+"6",
 "STOP"])
 
