@@ -4,11 +4,11 @@ function magicNum(input) {
     let magicNum = Number(input[2]);
     let counter = 0;
     let flag = false;
-    for(let i = start; i < end; i++) {
-        for(let j = start; j < end; j++) {
+    for(let i = start; i <= end; i++) {
+        for(let j = start; j <= end; j++) {
+            counter++
             if(i + j === magicNum) {
                 flag = true;
-                counter++
                 console.log(`Combination N:${counter} (${i} + ${j} = ${magicNum})`)
                 break;
             }
@@ -17,7 +17,12 @@ function magicNum(input) {
             break;                  //in main loop to end it whenever it end the first cycle of all loops
         }
     }
+
+    if(!flag) {
+    console.log(`${counter} combinations - neither equals ${magicNum}`);
+    }
 }
+
 
 magicNum(["1",
 
