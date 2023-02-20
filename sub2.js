@@ -26,9 +26,7 @@ function sub2(input) {
                         isValid2 = true;
                         num2 = `${m}${n2}`
                         buff += num2
-                        
                     }
-
                     if(num1 === num2) {
                         console.log("Cannot change the same player.");
                     } 

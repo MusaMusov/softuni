@@ -1,8 +1,11 @@
 function char(input) {
     let text = input[0];
-    for(i = 0; i < text.length; i++) {
+    for(let i = 0; i < 10; i++) {
         console.log(text[i]);
     }
 }
 
 char(["Softuni"])
+
+//i++
+//i--

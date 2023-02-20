@@ -15,7 +15,7 @@ function exam(input) {
     }
 
     let minutesTotalEarly = startTotalInMins - arriveTotalInMins;
-    let minutesTotalLate = minutesTotalEarly * -1;
+    let minutesTotalLate = arriveTotalInMins - startTotalInMins;
     let hoursEarly = Math.floor(minutesTotalEarly / 60);
     let hoursLate = Math.floor(minutesTotalLate / 60);
     let minutesEarly = minutesTotalEarly % 60;

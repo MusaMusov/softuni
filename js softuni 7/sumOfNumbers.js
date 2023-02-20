@@ -9,7 +9,7 @@ function sumOfNumbers(input) {
     console.log(`The sum of the digits is:${sum}`);
 }
 
-sumOfNumbers(["555"])
+sumOfNumbers(["55555555"])
 
 
 
