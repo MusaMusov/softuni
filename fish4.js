@@ -3,7 +3,8 @@ function fishingboat (input){
     let season = input[1];
     let fisherNumbers = Number(input[2]);
     let price = 0;
-
+    let difference = 0;
+ 
     switch(season){
         case "Spring": 
             price = 3000;
@@ -15,7 +16,6 @@ function fishingboat (input){
         case "Winter":
             price = 2600; 
             break;
-
     } 
     
     if (fisherNumbers <= 6) {
@@ -26,7 +26,8 @@ function fishingboat (input){
     } else {
         price = price * 0.75;
     } 
-    
+        
+
     if (fisherNumbers % 2 === 0){
         if (season !== 'Autumn'){
             price = price * 0.95
@@ -34,17 +35,13 @@ function fishingboat (input){
     }
 
 
+    difference = Math.abs(groupBudget - price);
  if (price <= groupBudget){
-    let difference = groupBudget - price;
     console.log(`Yes! You have ${difference.toFixed(2)} leva left.`);
  } else{
-    let difference1 = groupBudget - price;
-    console.log(`Not enough money! You need ${(difference1 * -1).toFixed(2)} leva.`);
+    console.log(`Not enough money! You need ${difference.toFixed(2)} leva.`);
  }
- 
-
 }
-
 
 fishingboat
 (["3600",
