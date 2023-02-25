@@ -1,7 +1,7 @@
 function tradeComissions (input){
     let town = input[0];
     let comissions = Number (input[1]);
-    let totalprofit ;
+    let totalprofit = 0;
  
     switch (town) {
         case "Sofia":
@@ -14,11 +14,7 @@ function tradeComissions (input){
             }else if (comissions > 10000) {
                 totalprofit = comissions * 0.12;
             }
-                    if (comissions < 0){
-                    console.log("error");
-                    } else {
-                        console.log(totalprofit.toFixed(2));
-                    }
+            console.log(totalprofit.toFixed(2));
             break;
         case "Varna":
             if (comissions <= 500) {
@@ -28,13 +24,8 @@ function tradeComissions (input){
             }else if (comissions <= 10000) {
                 totalprofit = comissions * 0.10;
             }else if (comissions > 10000) {
-                totalprofit = comissions * 0.13;
-            }
-                    if (comissions < 0){
-                    console.log("error");
-                    } else {
-                        console.log(totalprofit.toFixed(2));
-                    }
+                totalprofit = comissions * 0.13;   
+            }console.log(totalprofit.toFixed(2));
             break;
         case "Plovdiv":
                  if (comissions <= 500) {
@@ -46,11 +37,12 @@ function tradeComissions (input){
                 }else if (comissions > 10000) {
                     totalprofit = comissions * 0.145;
                 } 
-                if (comissions < 0){
-                    console.log("error");
+                    if(comissions <= 0) {
+                        console.log("error");
                     } else {
                         console.log(totalprofit.toFixed(2));
                     }
+                
                 break; 
                 default: console.log("error");
     }

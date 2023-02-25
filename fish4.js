@@ -1,49 +1,40 @@
-function fishingboat (input){
-    let groupBudget = Number(input[0]);
-    let season = input[1];
-    let fisherNumbers = Number(input[2]);
-    let price = 0;
-    let difference = 0;
- 
-    switch(season){
-        case "Spring": 
-            price = 3000;
-            break;
-        case "Summer":
-        case "Autumn": 
-            price = 4200; 
-            break;
-        case "Winter":
-            price = 2600; 
-            break;
-    } 
-    
-    if (fisherNumbers <= 6) {
-        price = price * 0.9;
+function workingHours(input) {
+    let hour = Number(input[0]);
+    let day = input[1];
+    let isOpen = false;
+   
+    switch (day) {
+      case "Monday":
+      case "Tueday":
+      case "Wednesday":
+      case "Thirsday":
+      case "Friday":
+      case "Saturday":
+        isOpen = true;
+        break;
+      case "Sunday":
+        isOpen = false;
+        break;
     }
-    else if (fisherNumbers <= 11){
-        price = price * 0.85
-    } else {
-        price = price * 0.75;
-    } 
-        
-
-    if (fisherNumbers % 2 === 0){
-        if (season !== 'Autumn'){
-            price = price * 0.95
+   
+    switch (hour) {
+      case "10":
+      case "11":
+      case "12":
+      case "13":
+      case "14":
+      case "15":
+      case "16":
+      case "17":
+      case "18":
+        if(isOpen) {
+        console.log("open");
         }
+        break;
+      default:
+        console.log("closed");
+        break;
     }
-
-
-    difference = Math.abs(groupBudget - price);
- if (price <= groupBudget){
-    console.log(`Yes! You have ${difference.toFixed(2)} leva left.`);
- } else{
-    console.log(`Not enough money! You need ${difference.toFixed(2)} leva.`);
- }
-}
-
-fishingboat
-(["3600",
-"Autumn",
-"6"]);
+  }
+  workingHours(["19","Friday"])
+  

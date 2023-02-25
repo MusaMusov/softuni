@@ -3,11 +3,11 @@ function numberTask (input) {
     let num2 = Number(input[1]);
     let operator = input[2];
     let result = 0;
-    let evenOrOdd
+    let evenOrOdd ="";
 
     if(num2 === 0){
         console.log(`Cannot divide ${num1} by zero`)
-        return
+        return;
     }
 
     switch(operator) {
@@ -48,9 +48,5 @@ function numberTask (input) {
     }
 }
 
-numberTask(["7",
-
-"3",
-
-"*"]) 
+numberTask(["7","3","*"]) 
 
