@@ -31,11 +31,11 @@ function trekking(input) {
             everest += currentGroup;
         }
     }
-    let musalaPercent = (musala / totalPeople) * 100
-    let monblanPercent = (monblan / totalPeople) * 100
-    let kiliPercent = (kili / totalPeople) * 100
-    let k2Percent = (k2 / totalPeople) * 100
-    let everestPercent = (everest / totalPeople) * 100
+    let musalaPercent = (musala / totalPeople) * 100;
+    let monblanPercent = (monblan / totalPeople) * 100;
+    let kiliPercent = (kili / totalPeople) * 100;
+    let k2Percent = (k2 / totalPeople) * 100;
+    let everestPercent = (everest / totalPeople) * 100;
 
     console.log(`${musalaPercent.toFixed(2)}%`);
     console.log(`${monblanPercent.toFixed(2)}%`);
@@ -46,17 +46,17 @@ function trekking(input) {
 
 trekking
 ([
-    "10",
-    "10",
-    "5",
-    "1",
-    "100",
-    "12", 
-    "26", 
-    "17", 
-    "37", 
-    "40", 
-    "78"
+"10",
+"10",
+"5",
+"1",
+"100",
+"12", 
+"26", 
+"17", 
+"37", 
+"40", 
+"78"
 ])
 
     // Първи ред - процентът изкачващи Мусала

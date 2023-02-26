@@ -8,8 +8,6 @@ function lily (input) {
     let age = Number(input[0]);
     let machinePrice = Number(input[1]);
     let toyPrice = Number(input[2]);
-    let evenYears = 0;
-    let oddYears = 0;
     let toyMoney = 0;
     let birthdayMoneyWon = 0;
     let yearlyMoney = 9;

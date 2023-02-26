@@ -18,7 +18,6 @@ function tenisRanklist(input) {
                 tournamentPoints += 720;
                 break;
         }
-
     }
     let totalPoints = startingPoints + tournamentPoints;
     let averagePoints = tournamentPoints / tournaments;
