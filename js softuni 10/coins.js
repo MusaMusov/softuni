@@ -1,27 +1,38 @@
 function vendingMachine(input) {
     let index = 0;
-    let coins = input[index];
+    let command = Number(input[index]);
     index++;
-    let coinsAmount = 0;
-    let cents = coins * 100;
-    let lev = cents[0];
-    if(cents[1] === 1 || cents[1] === 2 || cents[1] === 5) {
-        coinsAmount++;
-    } else if(cents[1] === 3 || cents[1] === 4 || cents[1] === 1 ||cents[1] === 6 || cents[1] === 7) {
-        coinsAmount += 2;
-    } else if(cents[1] === 8 || cents[1] === 9) {
-        coinsAmount += 3;
+    let coins = command * 100;
+
+    let coinsCounter = 0;
+
+    while(coins > 0) {
+        
+        if(coins >= 200) {
+            coins -= 200;
+        } else if(coins >= 100) {
+            coins -= 100;
+        } else if(coins >= 50) {
+            coins -= 50;
+        } else if(coins >= 20) {
+            coins -= 20;
+        } else if(coins >= 10) {
+            coins -= 10;
+        } else if(coins >= 5) {
+            coins -= 5;
+        } else if(coins >= 2) {
+            coins -= 2;
+        } else if(coins >= 1) {
+            coins -= 1;
+        }
+        coinsCounter++;
+        if (coins < 1) {
+            break;
+        }
+       
     }
 
-    if(cents[2] === 1 || cents[2] === 2 || cents[2] === 5) {
-        coinsAmount++;
-    } else if(cents[2] === 3 || cents[2] === 4 || cents[2] === 1 ||cents[2] === 6 || cents[2] === 7) {
-        coinsAmount += 2;
-    } else if(cents[2] === 8 || cents[2] === 9) {
-        coinsAmount += 3;
-    }
-console.log(coinsAmount + lev);
-
+    console.log(coinsCounter);
 }
 
-vendingMachine(["1.23"])
+vendingMachine(["200.3334"])
